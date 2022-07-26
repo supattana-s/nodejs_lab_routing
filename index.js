@@ -1,1 +1,10 @@
-console.log('test for push after created 2 upstream')
+const express = require('express');
+
+const app = express()
+
+app.get('/404', (req,res) => {
+    res.status(404).send('<h1>This page is not found.</h1>')
+})
+
+
+app.listen(8000, () => console.log('Server is running on port: 8000'))
